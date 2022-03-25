@@ -4,7 +4,11 @@
   
 </head>
 <body>
+
+ 
   <router-outlet>
+    <button (click)="useLanguage('en')">en</button>
+    <button (click)="useLanguage('fr')">fr</button>
     <app-login></app-login>
   </router-outlet>
 
