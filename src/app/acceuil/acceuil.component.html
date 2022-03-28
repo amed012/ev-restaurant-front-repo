@@ -1,1 +1,36 @@
-<p>acceuil works!</p>
+
+  
+        <div  *ngIf="isLoggedIn$ | async" class="d-flex justify-content-center">
+
+           
+            <div class="row with-806">
+                <div class="col-xs-1 center-block ">
+                
+                      <div  *ngFor="let a of allRestaurant"  class="card " >
+                
+                        <div class="card-header">
+                            {{a.categorie}}
+                        </div>
+
+                        <div class="card-body row">
+                            <div class="col-2">
+                            <img  class="fit-picture "
+                            src="../../assets/image/1.jpg"
+                            alt="Grapefruit slice atop a pile of other slices">
+                        </div>
+                            <div class="col-8">
+                                <h5 class="card-title"> {{a.description}}</h5>
+                                <p class="card-text">{{a.email}}</p>
+                                <p class="card-text">{{a.adresse}}</p>
+                                <a href="#!" class="btn btn-primary mg-381">Ajouter Commentaire</a>
+                                <a href="#!">20 Commentaire  *****</a>
+                            </div>
+                   
+                        </div>
+                      </div>
+                      
+                     
+                </div>
+              </div>
+         </div>
+          

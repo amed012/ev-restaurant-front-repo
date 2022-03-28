@@ -1,1 +1,45 @@
-<p>inscription works!</p>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class=" bg">
+
+
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+            <!-- Tabs Titles -->
+
+            <!-- Icon -->
+            <div class="fadeIn first">
+                *Restaurant Reviws*
+                <!--<img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />-->
+            </div>
+
+            <!-- Login Form -->
+            <form  [formGroup]="form" (ngSubmit)="onSubmit()">
+                <input type="text" id="name" class="fadeIn second" formControlName="name" placeholder="{{ 'NAME' | translate }}">
+                <input type="text" id="lastName" class="fadeIn third" formControlName="lastName"
+                    placeholder="{{ 'LASTNAME' | translate }}">
+                <input type="text" id="email" class="fadeIn third" formControlName="email"
+                    placeholder="{{ 'EMAIL' | translate }}">
+                <input type="text" id="userName" class="fadeIn third" formControlName="userName"
+                    placeholder="{{ 'USERNAME' | translate }}">
+                <input type="text" id="password" class="fadeIn third" formControlName="password"
+                    placeholder="{{ 'PASSWORD' | translate }}">
+                    <select  id="role" class="fadeIn third"  formControlName="role" value="{{ 'role' | translate }}">
+                   
+                        <option  >
+                             user 
+                        </option>
+                        <option  >
+                         propritaire 
+                        </option>
+                    </select>
+                    <input type="submit" class="fadeIn fourth"  value="{{ 'LOGIN_IN' | translate }}">
+                    <input type="submit" class="fadeIn fourth"   routerLink="/login" value="{{ 'LOGIN_IN' | translate }}">
+
+            </form>
+
+           
+
+        </div>
+    </div>
+</div>
