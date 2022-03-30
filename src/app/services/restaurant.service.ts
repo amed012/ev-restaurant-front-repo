@@ -15,4 +15,14 @@ export class RestaurantService {
     return this.http.get(environment.url + "/Restaurant/AllRestaurent");
   
   }
+
+  addRestauarnt(restaurant: Restaurant) {
+    const headers = { 'content-type': 'application/json' }
+    const body = JSON.stringify(restaurant);
+    console.log("fggg", body)
+
+    this.http.post(environment.url + '/Restaurant/addRestaurent', body, { 'headers': headers }).subscribe();
+  }
+
+  
 }

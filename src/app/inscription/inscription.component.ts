@@ -38,9 +38,10 @@ export class InscriptionComponent implements OnInit {
     );
   }
   onSubmit() {
-    const user: User = { nom: this.form.get('name').value, prenom: this.form.get('lastName').value, email:this.form.get('email').value, userName: this.form.get('userName').value, password: this.form.get('password').value, role: this.form.get('role').value ,active: true};
+    const user: User = { nom: this.form.get('name').value, prenom: this.form.get('lastName').value, email:this.form.get('email').value, username: this.form.get('userName').value, password: this.form.get('password').value, role: this.form.get('role').value ,active: true};
   
     if (this.form.valid) {
+      
       console.log("lorem", user);
       this.userService.addUser(user); 
     }

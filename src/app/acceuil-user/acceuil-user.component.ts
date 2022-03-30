@@ -5,11 +5,11 @@ import { Restaurant } from '../model/restaurant.model';
 import { RestaurantService } from '../services/restaurant.service';
 
 @Component({
-  selector: 'app-acceuil',
-  templateUrl: './acceuil.component.html',
-  styleUrls: ['./acceuil.component.css']
+  selector: 'app-acceuil-user',
+  templateUrl: './acceuil-user.component.html',
+  styleUrls: ['./acceuil-user.component.css']
 })
-export class AcceuilComponent implements OnInit {
+export class AcceuilUserComponent implements OnInit {
   isLoggedIn$: Observable<boolean>;
   constructor(private authService: AuthService,private restaurantService :RestaurantService ) { }
    
@@ -22,12 +22,8 @@ export class AcceuilComponent implements OnInit {
       this.allRestaurant = data;
     })
 
+  
    
 
   }
-  deleteRestaurant(a:any):void {
-  
-  }
-  
-
 }

@@ -9,7 +9,7 @@
 
             <!-- Icon -->
             <div class="fadeIn first">
-                *Restaurant Reviws*
+               *Restaurant Reviws*
                 <!--<img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />-->
             </div>
 
@@ -24,18 +24,20 @@
                     placeholder="{{ 'USERNAME' | translate }}">
                 <input type="text" id="password" class="fadeIn third" formControlName="password"
                     placeholder="{{ 'PASSWORD' | translate }}">
-                    <select  id="role" class="fadeIn third"  formControlName="role" value="{{ 'role' | translate }}">
-                   
+                  
+                    <select  id="role" class="fadeIn third"  formControlName="role" class="browser-default custom-select fadeIn third">
+                        <option selected>{{ 'select-role' | translate }}"</option>
                         <option  >
-                             user 
-                        </option>
-                        <option  >
-                         propritaire 
-                        </option>
-                    </select>
+                         {{ 'user' | translate }}
+                       </option>
+                       <option  >
+                         {{ 'propritaire' | translate }}
+                       </option>
+                      </select>
                     <input type="submit" class="fadeIn fourth"  value="{{ 'LOGIN_IN' | translate }}">
-                    <input type="submit" class="fadeIn fourth"   routerLink="/login" value="{{ 'LOGIN_IN' | translate }}">
-
+                    <div id="formFooter">
+                        <span> <a class="underlineHover" routerLink="/login"> {{ 'SIGN_IN' | translate }} </a></span>
+                      </div>
             </form>
 
            

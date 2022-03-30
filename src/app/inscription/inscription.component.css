@@ -276,5 +276,45 @@ html {
   
   backdrop-filter: blur(5px);
   }
+
+
+  .custom-select {
+    display: inline-block;
+    width: 80%;
+    height: calc(2.25rem + 2px);
+    padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+    line-height: 1.5;
+    color: #495057;
+    vertical-align: middle;
+    background-size: 8px 10px;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+input[type=submit] {
+    background-color: #aa432e;
+    border: none;
+    color: white;
+    padding: 15px 80px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 13px;
+    box-shadow: 0 10px 30px 0 rgb(95 186 233 / 40%);
+    border-radius: 5px 5px 5px 5px;
+    margin: 5px 20px 40px 20px;
+    transition: all 0.3s ease-in-out;
+  }
+  a {
+    color: #aa432e;
+  }
+  
+  a:hover {
+    color: #f3804b;
+  }
+  
   
   

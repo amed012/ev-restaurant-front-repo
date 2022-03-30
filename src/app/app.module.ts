@@ -20,6 +20,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { AppMaterialModule } from './app-material/app-material.module';
+import { AcceuilUserComponent } from './acceuil-user/acceuil-user.component';
+import { AddRestaurantComponent } from './add-restaurant/add-restaurant.component';
+import { CommentComponent } from './comment/comment.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { AppMaterialModule } from './app-material/app-material.module';
     InscriptionComponent,
     AcceuilComponent,
     AdminComponent,
-    NavBarComponent
+    NavBarComponent,
+    AcceuilUserComponent,
+    AddRestaurantComponent,
+    CommentComponent
   ],
   imports: [
     AppMaterialModule,

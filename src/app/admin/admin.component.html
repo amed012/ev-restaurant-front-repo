@@ -1,0 +1,40 @@
+
+  
+        <div  *ngIf="isLoggedIn$ | async" class="d-flex justify-content-center">
+
+           
+            <div class="row with-806">
+                <div class="col-xs-1 center-block ">
+                          
+                      <div  *ngFor="let a of allUser "  class="card " >
+                
+                        <div class="card-header">
+                            {{a.nom}}    {{a.prenom}}
+
+
+                        </div>
+
+                        <div class="card-body row">
+                            <button type="button" class="close" (onClick)="deleteUser(a.idUser)" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                              </button>
+                            <div class="col-2">
+                            <img  class="fit-picture "
+                            src="../../assets/image/profil.png"
+                            alt="Grapefruit slice atop a pile of other slices">
+                        </div>
+                            <div class="col-8">
+                                <h5 class="card-title">Nom : {{a.nom}}</h5>
+                                <p class="card-text"> Prenom :{{a.prenom}}</p>
+                                <p class="card-text">Email : {{a.email}}</p>
+                                <a href="#!">20 Commentaire  *****</a>
+                            </div>
+                   
+                        </div>
+                      </div>
+                      
+                     
+                </div>
+              </div>
+         </div>
+          

@@ -1,0 +1,33 @@
+<div *ngIf="isLoggedIn$ | async" class="d-flex justify-content-right bg">
+
+    <!-- Default form register -->
+    <form class="text-center border border-light p-5" [formGroup]="form" (ngSubmit)="onSubmit()">
+
+        <p class="h4 mb-4"> Ajout Restauarant</p>
+
+
+
+        
+      
+        <label for="name">Nom Restaurant</label>
+        <input type="text" id="name" class="form-control mb-4" placeholder=""formControlName="categorie">
+  
+        <label for="description">Description Restaurant</label>
+        <input  type="text"  id="description" class="form-control mb-4" placeholder="" formControlName="description">
+
+        <label for="email">Email</label>
+        <input id="email" placeholder=""  type="text"  class="form-control mb-4" formControlName="email">
+
+        <label for="adresse" >Adresse</label>
+        <input type="text" id="adresse" class="form-control mb-4" placeholder="" formControlName="adresse">
+
+
+        <!-- Sign up button -->
+        <button class="btn btn-info  btn-block" type="submit">Ajouter</button>
+
+
+
+
+    </form>
+    <!-- Default form register -->
+</div>

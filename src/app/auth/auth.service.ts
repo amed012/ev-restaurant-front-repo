@@ -8,17 +8,41 @@ import { User } from '../model/user';
 })
 
 export class AuthService {
-  private loggedIn = new BehaviorSubject<boolean>(false); // {1}
+  private loggedIn = new BehaviorSubject<boolean>(false); 
+  private profil = new BehaviorSubject<User>(null); 
+ 
+
   get isLoggedIn() {
     return this.loggedIn.asObservable(); 
   }
+  get getuser() {
+    return this.profil.asObservable(); 
+  }
+
+
+   
+
+
   constructor(
     private router: Router
   ) { }
   login(user: User) {
-    if (user.userName !== '' && user.password !== '') { // {3}
+    console.log(user.role);
+    if (user.role == 'admin' ) { 
+      console.log(user.role);
       this.loggedIn.next(true);
+      this.profil.next(user);
+      this.router.navigate(['admin']);
+    }
+    if (user.role == 'propritaire') { 
+      this.loggedIn.next(true);
+      this.profil.next(user);
       this.router.navigate(['acceuil']);
+    }
+    if (user.role == 'user') { 
+      this.loggedIn.next(true);
+      this.profil.next(user);
+      this.router.navigate(['acceuil2']);
     }
   }
   logout() { // {4}

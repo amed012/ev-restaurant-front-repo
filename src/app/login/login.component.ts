@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import { AuthService } from '../auth/auth.service';
+import { User } from '../model/user';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -13,8 +15,9 @@ export class LoginComponent implements OnInit {
 
   form: FormGroup; // {1}
   private formSubmitAttempt: boolean;
+  user: any;
 
-  constructor(private translate: TranslateService, private fb: FormBuilder, private authService: AuthService) {
+  constructor(private translate: TranslateService, private fb: FormBuilder, private authService: AuthService, private userService: UserService) {
 
 
   }
@@ -38,7 +41,13 @@ export class LoginComponent implements OnInit {
   }
   onSubmit() {
     if (this.form.valid) {
-      this.authService.login(this.form.value); // {7}
+      this.userService.getUserByUserNameAndPassword(this.form.get('userName').value,this.form.get('password').value).subscribe(data => {
+        console.log(data);
+        this.user= data;
+        this.authService.login( this.user); 
+      })
+      
+    // {7}
     }
     console.log("lorem",this.form.value);
             this.formSubmitAttempt = true; // {8}
@@ -46,3 +55,7 @@ export class LoginComponent implements OnInit {
 
 
 }
+function password(username: any, password: any) {
+  throw new Error('Function not implemented.');
+}
+

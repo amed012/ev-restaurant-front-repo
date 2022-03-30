@@ -21,6 +21,10 @@ export class NavBarComponent implements OnInit {
   onLogout() {
     this.authService.logout(); // {3}
   }
+  getProfil()
+  {
+    this.authService.logout(); // {3}
+  }
 
   useLanguage(language: string): void {
     console.log(language);

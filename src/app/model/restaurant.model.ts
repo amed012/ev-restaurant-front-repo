@@ -1,11 +1,13 @@
+import { User } from "./user";
 
 
 export interface Restaurant {
-    idRestaurant: number;
+    idRestaurant?: number;
     description: string;
     categorie: string;
     email: string;
     adresse: string;
-    active: string;
+    active: boolean;
+    user:User;
     
 }
