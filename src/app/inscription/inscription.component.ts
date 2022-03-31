@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../auth/auth.service';
 import { User } from '../model/user';
 import { UserService } from '../services/user.service';
@@ -10,9 +10,9 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./inscription.component.css']
 })
 export class InscriptionComponent implements OnInit {
-
+  addwork:boolean;
   form: FormGroup;
-  private formSubmitAttempt: boolean;
+  formSubmitAttempt: boolean;
   constructor(private fb: FormBuilder, private userService: UserService) {
 
 
@@ -42,9 +42,14 @@ export class InscriptionComponent implements OnInit {
   
     if (this.form.valid) {
       
-      console.log("lorem", user);
       this.userService.addUser(user); 
-    }
+      this.addwork=true;
+      this.form.clearValidators   }
+      else
+      {
+        this.addwork=true;
+         }
+        
     console.log("lorem", this.form.value);
     this.formSubmitAttempt = true; 
   }

@@ -1,21 +1,67 @@
 
   
-        <div  *ngIf="isLoggedIn$ | async" class="d-flex justify-content-center">
+        <div  *ngIf="isLoggedIn$ | async" >
+            <nav class="navbar navbar-expand-lg navbar-light bg-light mg-bottom-20">
+                <a class="navbar-brand" href="#">*Restaurant Reviws*</a>
+                <!-- button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button-->
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                 
+                  <form class="form-inline my-2 my-lg-0 right "  [formGroup]="form" (ngSubmit)="onSubmit()">
+                    <input class="form-control mr-sm-2 form "  id="username"  type="text" formControlName="username" placeholder="{{ 'SEARCH' | translate }}" aria-label="Search" 
+                  
+                [class.invalid]="form.get('username').invalid && 
+                    (form.get('username').dirty || form.get('username').touched)">
+                    <button class="btn btn-outline-success my-2 my-sm-0 mg-right " type="submit">   {{ 'SEARCH' | translate }}</button>
+                    <small class="text-danger" *ngIf="submitted && form.get('username').hasError('required')">
+                   {{ 'msg-req' | translate }} 
 
+                  </small>
+            
+                  
+        
+                  </form>
+                  <div class="dropdown mg-right-292 mg-right">
+                    <button class="btn btn-outline-primary dropdown-toggle" type="button" data-toggle="dropdown">{{ 'Language' | translate }} </button>
+                    <div class="dropdown-menu">
+                           <a class="dropdown-item" (click)="useLanguage('en')">en</a>
+                           <a class="dropdown-item" (click)="useLanguage('fr')">fr</a>
+            
+                    </div>
+                </div>
+                  <!--button class="btn btn-outline-primary dropdown-toggle"  > <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                  </svg>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" (click)="getProfil()">en</a>
+                    <a class="dropdown-item">fr</a>
+            
+             </div-->
+             <button class="btn btn-outline-success my-2 my-sm-0 mg-right " type="submit"  (click)="onLogout()">     {{ 'LOGOUT' | translate }} 
+            </button>
+            
+                
+            
+                 
+                  
+                </div>
+              </nav>
            
-            <div class="row with-806">
+            <div  class=" d-flex justify-content-center">
                 <div class="col-xs-1 center-block ">
                           
-                      <div  *ngFor="let a of allUser "  class="card " >
+                      <div  *ngFor="let a of allUser"  class="card " >
                 
                         <div class="card-header">
-                            {{a.nom}}    {{a.prenom}}
+                            {{a.username}}    
 
 
                         </div>
 
                         <div class="card-body row">
-                            <button type="button" class="close" (onClick)="deleteUser(a.idUser)" aria-label="Close">
+                            <button type="button" class="close" (click)="deleteUser(a.idUser)" aria-label="Close">
                                 <span aria-hidden="true">×</span>
                               </button>
                             <div class="col-2">
@@ -24,9 +70,11 @@
                             alt="Grapefruit slice atop a pile of other slices">
                         </div>
                             <div class="col-8">
-                                <h5 class="card-title">Nom : {{a.nom}}</h5>
-                                <p class="card-text"> Prenom :{{a.prenom}}</p>
-                                <p class="card-text">Email : {{a.email}}</p>
+                                <p  class="card-text">  {{ 'NAME' | translate }} : {{a.prenom}}</p>
+                                <p  class="card-text"> {{ 'LASTNAME' | translate }} : {{a.nom}}</p>
+                                <p class="card-text"> {{ 'EMAIL' | translate }} : {{a.email}}</p>
+                                <p class="card-text"> {{ 'Role' | translate }} : {{a.role}}</p>
+
                                 <a href="#!">20 Commentaire  *****</a>
                             </div>
                    

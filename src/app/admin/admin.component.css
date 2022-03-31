@@ -3,8 +3,8 @@
 }
 
 .card {
-  
   margin-bottom: 10px;
+    width: 900px;
 }
 .with-806 {
   
@@ -25,7 +25,49 @@
   margin-right: 7px;
 }
 
+.form-inline .form-control {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left:px;
+    width: 494px;}
+.mg-right{
+  margin-right: 3px;
+}
+.mg-right-292{
+  margin-left: 250px;
+}
 
+.mg-bottom-20{
+  margin-bottom: 20px;
+}
+.form{
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 220px;
+  width: 479px;
+}
+small{
+     margin-left: 232px;
+
+}
+
+
+.form-inline .form-control {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 178px;
+  width: 509px;
+}
+.mg-right{
+  margin-right: 3px;
+}
+.mg-right-292{
+  margin-left: 275px;
+}
+
+.mg-bottom-20{
+  margin-bottom: 20px;
+}
 
 
 

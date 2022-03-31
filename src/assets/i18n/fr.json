@@ -1,7 +1,23 @@
 {
-  "LOGIN": "Nom Utlisateur",
-  "PASSWORD": "Mot De Passe",
-  "LOGIN_IN": "Se Connecter",
+  "LOGIN": "Nom utlisateur",
+  "PASSWORD": "Mot de passe",
+  "LOGIN_IN": "Se connecter",
   "FORGET_PASSWORD": "Mot De Passe Oublier",
-  "SIGN_IN": "S'Inscrire"
+  "SIGN_IN": "S'inscrire",
+  "msg-req": "Ce champ est obligatoire",
+  "userNotFound": "Utilisateur n'existe pas.",
+  "USERNAME": "Nom utilisateur",
+  "EMAIL": "Email",
+  "LASTNAME": "Nom",
+  "NAME": "Prénom",
+  "Language": "Langue",
+  "SEARCH": "Rechercher",
+  "LOGOUT": "Déconnecter",
+  "inscriptionDone": "Inscription en succe",
+  "inscriptionfailed": "Inscription echec"
+
+  
+
+  
+ 
   }

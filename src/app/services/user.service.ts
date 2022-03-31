@@ -37,6 +37,11 @@ export class UserService {
 
   }
 
+  getUserByUserName(username: String):Observable<User> { 
+   return this.http.get<any>(environment.url + "/user/getUserByUserName?username=" + username);
+  }
+
+
 
 
 

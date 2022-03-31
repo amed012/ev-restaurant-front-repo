@@ -1,25 +1,70 @@
 .mg-bottom-15{
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .card {
-    
-    margin-bottom: 10px;
+  margin-bottom: 10px;
+    width: 900px;
 }
 .with-806 {
-    
-    width: 806px;
+  
+  width: 806px;
 }
 .mg-381 {
-    margin-left: 150px;
-    margin-right: 7px;
+  margin-left: 150px;
+  margin-right: 7px;
 }
 
 .fit-picture {
-    width: 81px;
+  width: 81px;
 }
-.bg{
-    background-color: #fff9f7;
+
+.close
+{
+  margin-left:347px;
+  margin-right: 7px;
+}
+
+.form-inline .form-control {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 178px;
+  width: 509px;}
+.mg-right{
+  margin-right: 3px;
+}
+.mg-right-292{
+  margin-left: 250px;
+}
+
+.mg-bottom-20{
+  margin-bottom: 20px;
+}
+.form{
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 180px;
+  width: 479px;
+}
+small{
+     margin-left: 232px;
+
+}
+.form-inline .form-control {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left:274px;
+  width: 475px;
+}
+.mg-right{
+  margin-right: 3px;
+}
+.mg-right-292{
+  margin-left: 275px;
+}
+
+.mg-bottom-20{
+  margin-bottom: 20px;
 }
 
 

@@ -3,7 +3,23 @@
     "PASSWORD": "Password",
     "LOGIN_IN": "Sign In",
     "FORGET_PASSWORD": "Forget Password",
-    "SIGN_IN": "Sign Up"
+    "SIGN_IN": "Sign Up",
+    "msg-req": "This field is required.",
+    "userNotFound": "User not found.",
+    "USERNAME": "Username",
+    "EMAIL": "Email",
+    "LASTNAME": "Lastname",
+    "NAME": "FirstName",
+    "Language": "Language",
+    "SEARCH": "Search",
+    "LOGOUT": "Logout",
+    "inscriptionDone": "Inscription sucess",
+    "inscriptionfailed": "Inscription failed"
+
+
+
+    
+
 
 
     

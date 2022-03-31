@@ -14,15 +14,27 @@
       </div>
 
       <!-- Login Form -->
+  
+      <small class="form-control text-danger"  *ngIf="formSubmitAttempt && user === null && form.valid">
+        {{ 'userNotFound' | translate }}
+      </small>
       <form  [formGroup]="form" (ngSubmit)="onSubmit()">
-        <input type="text" id="login" class="fadeIn second"    formControlName="userName" required placeholder="{{ 'LOGIN' | translate }}">
-        <input type="text" id="password" class="fadeIn third" formControlName="password" required placeholder="{{ 'PASSWORD' | translate }}">
+        <small class="form-control text-danger  "  *ngIf="formSubmitAttempt && form.get('userName').hasError('required')">
+          {{ 'msg-req' | translate }} 
+        </small>
+       <input type="text" id="userName" class="fadeIn second"    formControlName="userName"  placeholder="{{ 'LOGIN' | translate }}">
+       <small class="form-control text-danger  "  *ngIf="formSubmitAttempt && form.get('password').hasError('required')">
+        {{ 'msg-req' | translate }} 
+      </small>
+        <input type="text" id="password" class="fadeIn second"    formControlName="password"  placeholder="{{ 'LOGIN' | translate }}">
+
+       
         <input type="submit" class="fadeIn fourth"  value="{{ 'LOGIN_IN' | translate }}">
       </form>
 
       <!-- Remind Passowrd -->
       <div id="formFooter">
-        <span> <a class="underlineHover" href="#">{{ 'FORGET_PASSWORD' | translate }} </a> </span> /
+       <!--  <span> <a class="underlineHover" href="#">{{ 'FORGET_PASSWORD' | translate }} </a> </span> / -->
         <span> <a class="underlineHover" routerLink="/inscription"> {{ 'SIGN_IN' | translate }} </a></span>
       </div>
 

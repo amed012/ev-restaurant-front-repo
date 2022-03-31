@@ -18,4 +18,25 @@ width: 500px;
 margin-right: 159px;
 }
 
+.form-inline .form-control {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 178px;
+  width: 509px;;
+}
+.mg-right{
+  margin-right: 3px;
+}
+.mg-right-292{
+  margin-left: 275px;
+}
+
+.mg-bottom-20{
+  margin-bottom: 20px;
+}
+
+
+
+
+
 

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+import { TranslateService } from '@ngx-translate/core';
 import { Observable } from 'rxjs';
 import { AuthService } from '../auth/auth.service';
 import { Restaurant } from '../model/restaurant.model';
@@ -17,10 +19,11 @@ export class AddRestaurantComponent implements OnInit {
   isLoggedIn$: Observable<boolean>;
   getUser$: Observable<User>;
 
-  private formSubmitAttempt: boolean;
+   formSubmitAttempt: boolean;
 
-  constructor(private authService: AuthService,private fb: FormBuilder,private restaurantService :RestaurantService ) { }
+  constructor(private authService: AuthService,private fb: FormBuilder,private restaurantService :RestaurantService,private translate: TranslateService ) { }
      form: FormGroup;
+     formm: FormGroup;
      profil:User;
   ngOnInit(): void {
 
@@ -29,6 +32,12 @@ export class AddRestaurantComponent implements OnInit {
       categorie: ['', Validators.required],
       email: ['', Validators.required],
       adresse: ['', Validators.required],
+     
+      
+    });
+    this.formm = this.fb.group({
+      name: ['', Validators.required]
+   
      
       
     });
@@ -60,5 +69,14 @@ export class AddRestaurantComponent implements OnInit {
     console.log("lorem", this.form.value);
     this.formSubmitAttempt = true; 
   }
-
+  onnSubmit() {
+  }
+  onLogout() {
+    this.authService.logout(); // {3}
+  }
+ 
+  useLanguage(language: string): void {
+    console.log(language);
+    this.translate.use(language);
+  }
 }

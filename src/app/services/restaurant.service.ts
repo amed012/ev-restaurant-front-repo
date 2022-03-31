@@ -24,5 +24,10 @@ export class RestaurantService {
     this.http.post(environment.url + '/Restaurant/addRestaurent', body, { 'headers': headers }).subscribe();
   }
 
+  getRestaurantByName(name: String) : Observable<any> {
+   return this.http.get<any>(environment.url + "/Restaurant/restaurantByName?username=" + name);
+ }
+
+
   
 }
